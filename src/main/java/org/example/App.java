@@ -12,6 +12,8 @@ public class App {
       System.out.println("FIPS-tester");
       System.out.println();
 
+      System.out.println("com.redhat.fips: " + System.getProperty("com.redhat.fips", "null"));
+
       System.out.println("Security Providers:");
       Provider[] providers = Security.getProviders();
       for (int i = 0; i < providers.length; i++) {
