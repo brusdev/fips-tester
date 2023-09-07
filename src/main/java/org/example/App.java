@@ -18,6 +18,10 @@ public class App {
       Provider[] providers = Security.getProviders();
       for (int i = 0; i < providers.length; i++) {
          System.out.println("  " + providers[i].getName());
+
+         for (Provider.Service service : providers[i].getServices()) {
+            System.out.println("    " + service);
+         }
       }
    }
 }
